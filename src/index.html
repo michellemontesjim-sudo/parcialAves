@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Image Targets</title>
+  <meta itemprop="name" content="Image Targets">
+  <meta name="twitter:title" content="Image Targets">
+  <meta property="og:title" content="Image Targets">
+  <meta property="og:site_name" content="Image Targets">
+  <meta name="description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world.">
+  <meta itemprop="description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world.">
+  <meta property="og:description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world.">
+  <meta name="twitter:description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world.">
+  <script crossorigin="anonymous" src="./external/runtime/runtime.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@8thwall/engine-binary@1/dist/xr.js" async crossorigin="anonymous" data-preload-chunks="slam"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@8thwall/landing-page@1/dist/landing-page.js" crossorigin="anonymous"></script>
+  <meta property="og:image" content="https://8thwall.org/studio-image-targets-example/assets/preview.png">
+</head>
+
+<body>
+<script src="bundle.js"></script>
+<!-- CSS DE LA INTERFAZ -->
+<style>
+  /* Contenedor principal invisible que cubre toda la pantalla */
+  #ui-container {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none; /* Deja pasar los toques hacia el mundo 3D */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+
+  /* Tarjeta del Quiz */
+  #quiz-card {
+    display: none; /* Oculta por defecto */
+    pointer-events: auto; /* Reactiva los toques solo en la tarjeta */
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 16px;
+    width: 85%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    font-family: 'Segoe UI', sans-serif;
+    position: relative;
+  }
+
+  /* Botón para cerrar la tarjeta */
+  .btn-cerrar {
+    position: absolute;
+    top: 10px; right: 15px;
+    background: none; border: none;
+    font-size: 24px; color: #666;
+    cursor: pointer;
+  }
+
+  /* Estilos de los botones de respuesta */
+  .opcion-btn {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px;
+    background: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .opcion-btn:active { background: #e0e0e0; }
+  
+  /* Mensaje de retroalimentación */
+  #feedback-msj {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+  }
+</style>
+<!-- Botón fijo permanente en la pantalla -->
+<button id="btn-quiz-universal" style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 100; pointer-events: auto; background: #4CAF50; color: white; border: none; padding: 15px 30px; border-radius: 30px; font-size: 1.1rem; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); cursor: pointer;">
+  📝 Hacer Trivia de Aves
+</button>
+
+<!-- Botón fijo y siempre activo -->
+<button id="btn-sonido-html" style="position: absolute; bottom: 100px; left: 50%; transform: translateX(-50%); z-index: 100; background: #2196F3; color: white; border: none; padding: 15px 30px; border-radius: 30px; font-size: 1.1rem; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); pointer-events: auto; cursor: pointer; transition: background 0.3s;">
+  🔊 Escuchar Ave
+</button>
+
+<!-- Botón fijo para controlar la animación -->
+<!--<button id="btn-animacion-html" style="position: absolute; bottom: 160px; left: 50%; transform: translateX(-50%); z-index: 100; background: #9C27B0; color: white; border: none; padding: 15px 30px; border-radius: 30px; font-size: 1.1rem; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); pointer-events: auto; cursor: pointer; transition: background 0.3s;">
+  ⏸️ Pausar Vuelo
+</button> -->
+
+<!-- Contenedor transparente para la tarjeta del quiz -->
+<div id="ui-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; display: flex; justify-content: center; align-items: center; z-index: 101;">
+  
+  <div id="quiz-card" style="display: none; pointer-events: auto; background: #fff; padding: 24px; border-radius: 16px; width: 85%; max-width: 400px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); font-family: sans-serif; position: relative; text-align: center;">
+    <button id="btn-cerrar" style="position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 24px; cursor: pointer;">×</button>
+    <h2 id="quiz-title" style="margin-top: 0; color: #333;"></h2>
+    <p id="quiz-question" style="color: #555; font-size: 1.1rem; margin-bottom: 20px;"></p>
+    
+    <div id="quiz-options"></div>
+    <div id="feedback-msj" style="margin-top: 15px; font-size: 1.1rem; font-weight: bold; display: none;"></div>
+  </div>
+
+</div>
+
+</body>
+
+</html>

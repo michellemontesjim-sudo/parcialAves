@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 18,
+    "left": 0,
+    "width": 500,
+    "height": 667,
+    "isRotated": true,
+    "originalWidth": 500,
+    "originalHeight": 962
+  },
+  "imagePath": "image-targets/ave-bichofue_luminance.png",
+  "metadata": null,
+  "name": "ave-bichofue",
+  "resources": {
+    "originalImage": "ave-bichofue_original.png",
+    "croppedImage": "ave-bichofue_cropped.png",
+    "thumbnailImage": "ave-bichofue_thumbnail.png",
+    "luminanceImage": "ave-bichofue_luminance.png"
+  },
+  "created": 1791236358735,
+  "updated": 1791241498213
+}

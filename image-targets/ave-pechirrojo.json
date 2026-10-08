@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 0,
+    "width": 632,
+    "height": 843,
+    "isRotated": true,
+    "originalWidth": 632,
+    "originalHeight": 945
+  },
+  "imagePath": "image-targets/ave-pechirrojo_luminance.png",
+  "metadata": null,
+  "name": "ave-pechirrojo",
+  "resources": {
+    "originalImage": "ave-pechirrojo_original.png",
+    "croppedImage": "ave-pechirrojo_cropped.png",
+    "thumbnailImage": "ave-pechirrojo_thumbnail.png",
+    "luminanceImage": "ave-pechirrojo_luminance.png"
+  },
+  "created": 1791236376390,
+  "updated": 1791236380215
+}

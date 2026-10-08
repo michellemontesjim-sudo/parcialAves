@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 0,
+    "width": 622,
+    "height": 829,
+    "isRotated": true,
+    "originalWidth": 622,
+    "originalHeight": 951
+  },
+  "imagePath": "image-targets/ave-torcaza_luminance.png",
+  "metadata": null,
+  "name": "ave-torcaza",
+  "resources": {
+    "originalImage": "ave-torcaza_original.png",
+    "croppedImage": "ave-torcaza_cropped.png",
+    "thumbnailImage": "ave-torcaza_thumbnail.png",
+    "luminanceImage": "ave-torcaza_luminance.png"
+  },
+  "created": 1791236302261,
+  "updated": 1791236305674
+}

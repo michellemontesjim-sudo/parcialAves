@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 0,
+    "width": 636,
+    "height": 848,
+    "isRotated": true,
+    "originalWidth": 636,
+    "originalHeight": 931
+  },
+  "imagePath": "image-targets/ave-colibri_luminance.png",
+  "metadata": null,
+  "name": "ave-colibri",
+  "resources": {
+    "originalImage": "ave-colibri_original.png",
+    "croppedImage": "ave-colibri_cropped.png",
+    "thumbnailImage": "ave-colibri_thumbnail.png",
+    "luminanceImage": "ave-colibri_luminance.png"
+  },
+  "created": 1791236326382,
+  "updated": 1791236329393
+}

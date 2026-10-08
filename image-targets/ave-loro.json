@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 0,
+    "width": 631,
+    "height": 841,
+    "isRotated": true,
+    "originalWidth": 631,
+    "originalHeight": 897
+  },
+  "imagePath": "image-targets/ave-loro_luminance.png",
+  "metadata": null,
+  "name": "ave-loro",
+  "resources": {
+    "originalImage": "ave-loro_original.png",
+    "croppedImage": "ave-loro_cropped.png",
+    "thumbnailImage": "ave-loro_thumbnail.png",
+    "luminanceImage": "ave-loro_luminance.png"
+  },
+  "created": 1791236343244,
+  "updated": 1791241488028
+}
