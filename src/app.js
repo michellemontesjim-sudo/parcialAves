@@ -13,6 +13,7 @@ const onxrloaded = () => {
       require('../image-targets/ave-loro.json'),
       require('../image-targets/ave-bichofue.json'),
       require('../image-targets/ave-pechirrojo.json'),
+      require('../image-targets/portada-libro-aves.json'),
     ],
   })
   XR8.addCameraPipelineModule(LandingPage.pipelineModule())

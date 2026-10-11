@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 0,
+    "left": 38,
+    "width": 602,
+    "height": 802,
+    "isRotated": true,
+    "originalWidth": 762,
+    "originalHeight": 802
+  },
+  "imagePath": "image-targets/portada-libro-aves_luminance.png",
+  "metadata": null,
+  "name": "portada-libro-aves",
+  "resources": {
+    "originalImage": "portada-libro-aves_original.png",
+    "croppedImage": "portada-libro-aves_cropped.png",
+    "thumbnailImage": "portada-libro-aves_thumbnail.png",
+    "luminanceImage": "portada-libro-aves_luminance.png"
+  },
+  "created": 1791750628509,
+  "updated": 1791750640842
+}

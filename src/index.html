@@ -1,115 +1,279 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Image Targets</title>
-  <meta itemprop="name" content="Image Targets">
-  <meta name="twitter:title" content="Image Targets">
-  <meta property="og:title" content="Image Targets">
-  <meta property="og:site_name" content="Image Targets">
-  <meta name="description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world.">
-  <meta itemprop="description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world.">
-  <meta property="og:description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world.">
-  <meta name="twitter:description" content="This project demonstrates how to use Image Targets to anchor virtual content to images in the real world.">
+  <title>Image Targets - Aves</title>
+  
+  <!-- Metadatos de 8th Wall -->
   <script crossorigin="anonymous" src="./external/runtime/runtime.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@8thwall/engine-binary@1/dist/xr.js" async crossorigin="anonymous" data-preload-chunks="slam"></script>
   <script src="https://cdn.jsdelivr.net/npm/@8thwall/landing-page@1/dist/landing-page.js" crossorigin="anonymous"></script>
-  <meta property="og:image" content="https://8thwall.org/studio-image-targets-example/assets/preview.png">
+
+  <!-- ESTILOS UNIFICADOS DE TODA LA APLICACIÓN -->
+  <style>
+    :root {
+      --color-fondo: #F9F9F7;
+      --color-texto: #1A3B2B;
+      --color-acento: #D33F3F;
+    }
+    
+    /* 1. ESTILOS DEL MENÚ DE LA PORTADA */
+    .interfaz-ui {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      z-index: 200; /* Z-index mayor para que tape los otros botones al abrirse */
+      font-family: 'Inter', sans-serif;
+      background-color: var(--color-fondo);
+      display: none; /* LA CLAVE: Oculto por defecto para que inicie la cámara */
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .hero-movil {
+      padding: 40px 20px;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/img-uao.jpg') center/cover;
+      color: white;
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .btn-rojo {
+      background: var(--color-acento); color: white; padding: 16px 24px;
+      border-radius: 8px; border: none; font-size: 1rem; font-weight: bold;
+      margin-top: 20px; cursor: pointer;
+    }
+    .catalogo-seccion { padding: 20px; color: var(--color-texto); }
+    .filtros-scroll { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 10px; }
+    .filtro-chip { background: transparent; border: 1px solid #ccc; padding: 8px 16px; border-radius: 20px; white-space: nowrap; }
+    .filtro-chip.activo { background: var(--color-texto); color: white; }
+    
+    .modal-ave { background: white; border-radius: 24px 24px 0 0; padding: 24px; box-shadow: 0 -4px 20px rgba(0,0,0,0.1); margin-top: 30px; }
+    .botones-tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+    .btn-tab { flex: 1; padding: 10px; border-radius: 8px; border: 1px solid #ccc; background: white; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .btn-tab.activo { background: var(--color-texto); color: white; }
+    .especificaciones-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px; }
+    .spec-item p { margin: 0; font-size: 0.8rem; color: #666; }
+    .spec-item h4 { margin: 5px 0 0; font-size: 0.9rem; color: var(--color-texto); }
+
+    /* 2. ESTILOS DE LA EXPERIENCIA AR (CÁMARA) */
+    #ui-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; display: flex; justify-content: center; align-items: center; z-index: 101; }
+    #quiz-card { display: none; pointer-events: auto; background: #ffffff; padding: 24px; border-radius: 16px; width: 85%; max-width: 400px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); font-family: 'Segoe UI', sans-serif; position: relative; text-align: center; }
+    #btn-cerrar { position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 24px; color: #666; cursor: pointer; }
+    .opcion-btn { display: block; width: 100%; margin: 8px 0; padding: 12px; background: #f0f0f0; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; cursor: pointer; transition: all 0.2s; }
+    .opcion-btn:active { background: #e0e0e0; }
+    #feedback-msj { margin-top: 15px; font-size: 1.1rem; font-weight: bold; display: none; }
+
+    
+  </style>
 </head>
 
 <body>
-<script src="bundle.js"></script>
-<!-- CSS DE LA INTERFAZ -->
-<style>
-  /* Contenedor principal invisible que cubre toda la pantalla */
-  #ui-container {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    pointer-events: none; /* Deja pasar los toques hacia el mundo 3D */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-  }
+  <!-- Conexión lógica con los scripts de Niantic Studio -->
+  <script src="bundle.js"></script>
 
-  /* Tarjeta del Quiz */
-  #quiz-card {
-    display: none; /* Oculta por defecto */
-    pointer-events: auto; /* Reactiva los toques solo en la tarjeta */
-    background: #ffffff;
-    padding: 24px;
-    border-radius: 16px;
-    width: 85%;
-    max-width: 400px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    font-family: 'Segoe UI', sans-serif;
-    position: relative;
-  }
+  <!-- ==========================================
+       VISTA 1: MENÚ DE LA PORTADA
+       (Se activa vía JavaScript al ver la portada)
+       ========================================== -->
+  <div id="ui-menu-principal" class="interfaz-ui"> 
+    <div class="hero-movil">
+      <h1>Aves del campus de la UAO.</h1>
+      <p>Colores que sorprenden, cantos que conectan.</p>
+      <!-- Botón que cierra el menú y devuelve el control a la cámara -->
+      <button class="btn-rojo" id="btn-cerrar-menu-escanear">Cerrar menú y escanear libro 📷</button>
+    </div>
 
-  /* Botón para cerrar la tarjeta */
-  .btn-cerrar {
-    position: absolute;
-    top: 10px; right: 15px;
-    background: none; border: none;
-    font-size: 24px; color: #666;
-    cursor: pointer;
-  }
+    <div class="catalogo-seccion">
+      <h2>Encuentra tu próxima maravilla</h2>
+      
+      <!-- 1. LOS BOTONES DE TUS AVES -->
+      <div class="filtros-scroll" id="contenedor-filtros">
+        <button class="filtro-chip activo" onclick="cambiarAve('torcaza', this)">Torcaza naguiblanca</button>
+        <button class="filtro-chip" onclick="cambiarAve('colibri', this)">Colibrí esmeralda</button>
+        <button class="filtro-chip" onclick="cambiarAve('loro', this)">Loro cabeciamarilla</button>
+        <button class="filtro-chip" onclick="cambiarAve('bichofue', this)">Bichofué</button>
+        <button class="filtro-chip" onclick="cambiarAve('pechirrojo', this)">Pechirrojo</button>
+      </div>
+      
+      <!-- 2. LA TARJETA DINÁMICA -->
+      <div class="modal-ave">
+        <h2 id="ui-ave-titulo">Torcaza</h2>
+        <p id="ui-ave-cientifico" style="font-style: italic; color: #666;">Zenaida auriculata</p>
+        
+        <div class="botones-tabs">
+          <button class="btn-tab activo">ⓘ Información</button>
+          <!-- Botón de sonido conectado a la función -->
+          <button class="btn-tab" onclick="reproducirCanto()" style="cursor: pointer;">🔊 Sonido</button>
+        </div>
 
-  /* Estilos de los botones de respuesta */
-  .opcion-btn {
-    display: block;
-    width: 100%;
-    margin: 8px 0;
-    padding: 12px;
-    background: #f0f0f0;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .opcion-btn:active { background: #e0e0e0; }
-  
-  /* Mensaje de retroalimentación */
-  #feedback-msj {
-    margin-top: 15px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-align: center;
-    display: none;
-  }
-</style>
-<!-- Botón fijo permanente en la pantalla -->
-<button id="btn-quiz-universal" style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 100; pointer-events: auto; background: #4CAF50; color: white; border: none; padding: 15px 30px; border-radius: 30px; font-size: 1.1rem; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); cursor: pointer;">
-  📝 Hacer Trivia de Aves
-</button>
+        <!-- Reproductor de audio oculto -->
+        <audio id="ui-ave-audio" src="assets/audio-torcaza.mp3"></audio>
 
-<!-- Botón fijo y siempre activo -->
-<button id="btn-sonido-html" style="position: absolute; bottom: 100px; left: 50%; transform: translateX(-50%); z-index: 100; background: #2196F3; color: white; border: none; padding: 15px 30px; border-radius: 30px; font-size: 1.1rem; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); pointer-events: auto; cursor: pointer; transition: background 0.3s;">
-  🔊 Escuchar Ave
-</button>
+        <!-- Imagen del ave (Con ID para cambiarla por JS) -->
+        <img id="ui-ave-img" src="assets/img-torcaza.jpg" style="width: 100%; border-radius: 12px; margin-bottom: 15px;" alt="Fotografía del ave">
+        
+        <p id="ui-ave-desc">Ave muy común en zonas urbanas y rurales, conocida por su canto suave y melancólico.</p>
 
-<!-- Botón fijo para controlar la animación -->
-<!--<button id="btn-animacion-html" style="position: absolute; bottom: 160px; left: 50%; transform: translateX(-50%); z-index: 100; background: #9C27B0; color: white; border: none; padding: 15px 30px; border-radius: 30px; font-size: 1.1rem; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); pointer-events: auto; cursor: pointer; transition: background 0.3s;">
-  ⏸️ Pausar Vuelo
-</button> -->
-
-<!-- Contenedor transparente para la tarjeta del quiz -->
-<div id="ui-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; display: flex; justify-content: center; align-items: center; z-index: 101;">
-  
-  <div id="quiz-card" style="display: none; pointer-events: auto; background: #fff; padding: 24px; border-radius: 16px; width: 85%; max-width: 400px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); font-family: sans-serif; position: relative; text-align: center;">
-    <button id="btn-cerrar" style="position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 24px; cursor: pointer;">×</button>
-    <h2 id="quiz-title" style="margin-top: 0; color: #333;"></h2>
-    <p id="quiz-question" style="color: #555; font-size: 1.1rem; margin-bottom: 20px;"></p>
-    
-    <div id="quiz-options"></div>
-    <div id="feedback-msj" style="margin-top: 15px; font-size: 1.1rem; font-weight: bold; display: none;"></div>
+        <div class="especificaciones-grid">
+          <div class="spec-item"><p>Hábitat</p><h4 id="ui-ave-habitat">Zonas urbanas</h4></div>
+          <div class="spec-item"><p>Tamaño</p><h4 id="ui-ave-tamano">24–26 cm</h4></div>
+          <div class="spec-item"><p>Alimentación</p><h4 id="ui-ave-dieta">Semillas</h4></div>
+        </div>
+      </div>
+    </div>
   </div>
 
-</div>
+
+  <!-- ==========================================
+       VISTA 2: EXPERIENCIA DE REALIDAD AUMENTADA
+       (Botones y Quiz sobre los modelos 3D)
+       ========================================== -->
+
+  <!-- Botones AR -->
+  <button id="btn-quiz-universal" style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 100; pointer-events: auto; background: #4CAF50; color: white; border: none; padding: 15px 30px; border-radius: 30px; font-size: 1.1rem; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); cursor: pointer;">
+    📝 Hacer Trivia de Aves
+  </button>
+
+  <button id="btn-sonido-html" style="position: absolute; bottom: 100px; left: 50%; transform: translateX(-50%); z-index: 100; background: #2196F3; color: white; border: none; padding: 15px 30px; border-radius: 30px; font-size: 1.1rem; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); pointer-events: auto; cursor: pointer; transition: background 0.3s;">
+    🔊 Escuchar Ave
+  </button>
+
+  <!-- Tarjeta del Quiz -->
+  <div id="ui-container">
+    <div id="quiz-card">
+      <button id="btn-cerrar">×</button>
+      <h2 id="quiz-title" style="margin-top: 0; color: #333;"></h2>
+      <p id="quiz-question" style="color: #555; font-size: 1.1rem; margin-bottom: 20px;"></p>
+      <div id="quiz-options"></div>
+      <div id="feedback-msj"></div>
+    </div>
+  </div>
+
+<script>
+  // Base de datos de tus aves
+  const datosAves = {
+    torcaza: {
+      titulo: "Torcaza naguiblanca",
+      cientifico: "Zenaida auriculata",
+      imagen: "assets/img-torcaza.jpg",   // Reemplaza con el nombre exacto de tu archivo de imagen
+      audio: "assets/cantoTorcaza.mp3", // Reemplaza con el nombre exacto de tu archivo MP3
+      desc: "Ave muy común en zonas urbanas y rurales, conocida por su canto suave y melancólico.",
+      habitat: "Zonas urbanas",
+      tamano: "24–26 cm",
+      dieta: "Semillas"
+    },
+    colibri: {
+      titulo: "Colibrí esmeralda",
+      cientifico: "Trochilidae",
+      imagen: "assets/img-colibri.jpg", 
+      audio: "audio-colibri.mp3",
+      desc: "Pequeño y brillante, su vuelo le permite mantenerse suspendido frente a las flores y volar hacia atrás.",
+      habitat: "Bosques y jardines",
+      tamano: "7–13 cm",
+      dieta: "Néctar e insectos"
+    },
+    loro: {
+      titulo: "Loro cabeciamarilla",
+      cientifico: "Psittacidae",
+      imagen: "assets/img-loro.jpg",
+      audio: "audio-loro.mp3",
+      desc: "Ave muy colorida e inteligente, conocida por su capacidad de imitar sonidos y su pico curvo.",
+      habitat: "Selvas y bosques",
+      tamano: "30–40 cm",
+      dieta: "Frutas y semillas"
+    },
+    bichofue: {
+      titulo: "Bichofué",
+      cientifico: "Pitangus sulphuratus",
+      imagen: "assets/img-bichofue.jpg",
+      audio: "audio-bichofue.mp3",
+      desc: "Ave de pecho amarillo vibrante y antifaz negro, muy ruidosa. Su canto parece decir su propio nombre.",
+      habitat: "Zonas abiertas",
+      tamano: "21–26 cm",
+      dieta: "Insectos y frutos"
+    },
+    pechirrojo: {
+      titulo: "Pechirrojo",
+      cientifico: "Pyrocephalus rubinus",
+      imagen: "assets/img-pechirrojo.jpg",
+      audio: "audio-pechirrojo.mp3",
+      desc: "El macho destaca por su espectacular plumaje rojo intenso. Es un cazador muy ágil que atrapa insectos en pleno vuelo.",
+      habitat: "Zonas abiertas",
+      tamano: "13–15 cm",
+      dieta: "Insectos"
+    }
+  };
+
+  function cambiarAve(aveId, botonSeleccionado) {
+    const ave = datosAves[aveId];
+    if(!ave) return;
+
+    const modal = document.querySelector('.modal-ave');
+    const reproductor = document.getElementById('ui-ave-audio');
+    const btnSonido = document.querySelectorAll('.botones-tabs .btn-tab')[1];
+
+    // 1. Iniciar el desvanecimiento de salida (Fade Out)
+    modal.classList.add('oculto-suave');
+
+    // Cambiar color del botón superior inmediatamente
+    document.querySelectorAll('.filtro-chip').forEach(btn => btn.classList.remove('activo'));
+    botonSeleccionado.classList.add('activo');
+
+    // 2. Esperar 250ms a que la tarjeta se vuelva invisible antes de cambiar los datos
+    setTimeout(() => {
+      // Apagar audio anterior
+      if (reproductor) reproductor.pause();
+      if (btnSonido) {
+        btnSonido.classList.remove('activo');
+        btnSonido.innerText = "🔊 Sonido";
+      }
+
+      // Actualizar textos
+      document.getElementById('ui-ave-titulo').innerText = ave.titulo;
+      document.getElementById('ui-ave-cientifico').innerText = ave.cientifico;
+      document.getElementById('ui-ave-desc').innerText = ave.desc;
+      document.getElementById('ui-ave-habitat').innerText = ave.habitat;
+      document.getElementById('ui-ave-tamano').innerText = ave.tamano;
+      document.getElementById('ui-ave-dieta').innerText = ave.dieta;
+
+      // Actualizar rutas
+      document.getElementById('ui-ave-img').src = ave.imagen;
+      if (reproductor) reproductor.src = ave.audio;
+
+      // 3. Iniciar el desvanecimiento de entrada (Fade In)
+      modal.classList.remove('oculto-suave');
+    }, 250); // Coincide con el tiempo de transición de CSS
+  }
+  function reproducirCanto() {
+    const reproductor = document.getElementById('ui-ave-audio');
+    const btnSonido = document.querySelectorAll('.botones-tabs .btn-tab')[1];
+
+    // Evitamos el error si el reproductor aún no tiene un archivo asignado
+    if (!reproductor || !reproductor.src) return;
+
+    if (reproductor.paused || reproductor.ended) {
+      // Usamos un bloque .catch() por si el motor lanza un error de carga, para que no rompa la app
+      reproductor.play().catch(error => {
+          console.warn("Cargando el archivo de audio...", error);
+      });
+      
+      btnSonido.classList.add('activo');
+      btnSonido.innerText = "⏸️ Pausar";
+    } else {
+      reproductor.pause();
+      btnSonido.classList.remove('activo');
+      btnSonido.innerText = "🔊 Sonido";
+    }
+
+    // Cuando el ave termina de cantar naturalmente, el botón se apaga solo
+    reproductor.onended = function() {
+        btnSonido.classList.remove('activo');
+        btnSonido.innerText = "🔊 Sonido";
+    };
+  }
+</script>
 
 </body>
 

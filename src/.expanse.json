@@ -151,6 +151,13 @@
           "id": "dd6a0a91-9d1e-4799-9770-55c24664f18e",
           "name": "quiz-universal",
           "parameters": {}
+        },
+        "30487405-e5bd-4e74-9381-e09583ec79d0": {
+          "id": "30487405-e5bd-4e74-9381-e09583ec79d0",
+          "name": "controlador-portada",
+          "parameters": {
+            "nombreMarcadorPortada": "portada-libro-aves"
+          }
         }
       },
       "geometry": null,
@@ -2353,6 +2360,149 @@
       },
       "name": "sol.glb",
       "order": 3.4934504540614792
+    },
+    "63348a01-6f3d-4fe6-b539-1751abc36276": {
+      "id": "63348a01-6f3d-4fe6-b539-1751abc36276",
+      "position": [
+        -1.7808828462958042,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "88453035-dc0f-486d-868a-8ff7c2fda864",
+      "components": {},
+      "name": "portada-libro-aves",
+      "imageTarget": {
+        "name": "portada-libro-aves"
+      },
+      "order": 9.757354959089911
+    },
+    "bd1c49e0-1b64-4277-ab34-e184db5db347": {
+      "id": "bd1c49e0-1b64-4277-ab34-e184db5db347",
+      "position": [
+        -0.025934473760258925,
+        0.721975264025831,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "63348a01-6f3d-4fe6-b539-1751abc36276",
+      "components": {
+        "a77dcae5-0840-4a9c-90c1-74caa218819f": {
+          "id": "a77dcae5-0840-4a9c-90c1-74caa218819f",
+          "name": "boton-3d-portada",
+          "parameters": {}
+        }
+      },
+      "ui": {
+        "type": "3d",
+        "width": 100,
+        "height": 36,
+        "background": "#096d9f",
+        "borderRadius": 18,
+        "flexDirection": "row",
+        "backgroundOpacity": 1,
+        "padding": "10",
+        "gap": "6",
+        "alignItems": "center",
+        "justifyContent": "center"
+      },
+      "name": "Button (1)",
+      "order": 1.0089956896138952
+    },
+    "2887b6d1-5769-4e7c-b0ab-454809e0792e": {
+      "id": "2887b6d1-5769-4e7c-b0ab-454809e0792e",
+      "position": [
+        -0.323,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "bd1c49e0-1b64-4277-ab34-e184db5db347",
+      "components": {},
+      "name": "Icon (3)",
+      "ui": {
+        "width": 16,
+        "height": 16,
+        "image": {
+          "type": "url",
+          "url": "https://cdn-icons-png.flaticon.com/512/5694/5694744.png"
+        },
+        "backgroundOpacity": 1,
+        "backgroundSize": "contain"
+      },
+      "order": 0.03358515849761545
+    },
+    "b64cd932-7765-4160-9e19-cf94b369451d": {
+      "id": "b64cd932-7765-4160-9e19-cf94b369451d",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "bd1c49e0-1b64-4277-ab34-e184db5db347",
+      "components": {},
+      "name": "Text",
+      "ui": {
+        "width": 50,
+        "height": 14,
+        "text": "Interfaz",
+        "color": "#ffffff",
+        "fontSize": 14,
+        "font": {
+          "type": "font",
+          "font": "Nunito"
+        }
+      },
+      "order": 1.1311539087966282
     }
   },
   "spaces": {
