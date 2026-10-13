@@ -1427,7 +1427,7 @@
     "cc7f80c7-fd52-44ba-bd0b-8b6c1699a278": {
       "id": "cc7f80c7-fd52-44ba-bd0b-8b6c1699a278",
       "position": [
-        1.4496708340741338,
+        2.0313782697689424,
         0,
         0
       ],
@@ -1455,7 +1455,7 @@
     "aeffb6d5-5e49-42ba-af64-c4a89d723242": {
       "id": "aeffb6d5-5e49-42ba-af64-c4a89d723242",
       "position": [
-        2.9593560871913507,
+        3.9408181287682256,
         0,
         0
       ],
@@ -1483,7 +1483,7 @@
     "c68dcc96-11dc-4924-b603-981dd90a9356": {
       "id": "c68dcc96-11dc-4924-b603-981dd90a9356",
       "position": [
-        4.315381782558646,
+        5.640635839922881,
         0,
         0
       ],
@@ -1511,7 +1511,7 @@
     "1f867c5e-4336-4506-b3db-abd9596e8a3c": {
       "id": "1f867c5e-4336-4506-b3db-abd9596e8a3c",
       "position": [
-        5.922049786911198,
+        7.3632360305607945,
         0,
         0
       ],
@@ -1760,87 +1760,6 @@
       "name": "pechirrojo.glb",
       "order": 7.531676718523685
     },
-    "6ae037d3-948f-46a3-b044-1554a0a0cb52": {
-      "id": "6ae037d3-948f-46a3-b044-1554a0a0cb52",
-      "position": [
-        -0.5334588003827121,
-        0,
-        0.322975420827583
-      ],
-      "rotation": [
-        0,
-        0,
-        0,
-        1
-      ],
-      "scale": [
-        0.2772436254384077,
-        0.2772436254384077,
-        0.2772436254384077
-      ],
-      "geometry": null,
-      "material": null,
-      "parentId": "aeffb6d5-5e49-42ba-af64-c4a89d723242",
-      "components": {
-        "9de5cac7-a9e1-416a-8269-fb335594cb2b": {
-          "id": "9de5cac7-a9e1-416a-8269-fb335594cb2b",
-          "name": "boton-quiz",
-          "parameters": {
-            "tipoAve": "Loro"
-          }
-        }
-      },
-      "ui": {
-        "type": "3d",
-        "width": 41,
-        "height": 36,
-        "background": "#ad50ff",
-        "borderRadius": 18,
-        "flexDirection": "row",
-        "backgroundOpacity": 1,
-        "padding": "10",
-        "gap": "6",
-        "alignItems": "center",
-        "justifyContent": "center"
-      },
-      "name": "Button",
-      "order": 7.3755753455970225,
-      "disabled": true
-    },
-    "467be5e0-f14e-47df-a0cd-03a9cfd310d6": {
-      "id": "467be5e0-f14e-47df-a0cd-03a9cfd310d6",
-      "position": [
-        -0.323,
-        0,
-        0
-      ],
-      "rotation": [
-        0,
-        0,
-        0,
-        1
-      ],
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "geometry": null,
-      "material": null,
-      "parentId": "6ae037d3-948f-46a3-b044-1554a0a0cb52",
-      "components": {},
-      "name": "Icon (2)",
-      "ui": {
-        "width": 16,
-        "height": 16,
-        "image": {
-          "type": "url",
-          "url": "https://cdn.8thwall.com/web/assets/sprites/8w-icon-m8j35d7y.png"
-        },
-        "backgroundOpacity": 1
-      },
-      "order": 0.08457858554415448
-    },
     "e0514789-d3d5-4af8-a3e4-6247c30aac4a": {
       "id": "e0514789-d3d5-4af8-a3e4-6247c30aac4a",
       "position": [
@@ -2030,9 +1949,9 @@
     "d152c790-89f8-4e29-b8a8-4ef23ade25cf": {
       "id": "d152c790-89f8-4e29-b8a8-4ef23ade25cf",
       "position": [
-        -0.7072161708397932,
-        0.4060850347593366,
-        0
+        -0.022276216933921233,
+        -0.49286610649898693,
+        0.1020903404638655
       ],
       "rotation": [
         0,
@@ -2503,6 +2422,275 @@
         }
       },
       "order": 1.1311539087966282
+    },
+    "ec1db0cc-292d-4cb5-a558-ee401785c7ae": {
+      "id": "ec1db0cc-292d-4cb5-a558-ee401785c7ae",
+      "position": [
+        -3.552713678800501e-15,
+        -0.4401893553706956,
+        0.3659323056686332
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        0.9999999999999998
+      ],
+      "scale": [
+        0.17347187547820261,
+        0.17347187547820261,
+        0.17347187547820261
+      ],
+      "geometry": null,
+      "material": {
+        "type": "video",
+        "color": "#442727",
+        "opacity": 1
+      },
+      "parentId": "1f867c5e-4336-4506-b3db-abd9596e8a3c",
+      "components": {},
+      "gltfModel": {
+        "src": {
+          "type": "asset",
+          "asset": "assets/modelos/nido.glb"
+        },
+        "animationClip": "NIDO_BICHOFUE_CTRL_acción",
+        "loop": false
+      },
+      "name": "nido.glb",
+      "order": 8.8031459911461
+    },
+    "df5bf73a-52dd-432a-a7ab-faa674d087ab": {
+      "id": "df5bf73a-52dd-432a-a7ab-faa674d087ab",
+      "position": [
+        -0.7019674616607376,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "570ff713-1f33-4838-99ad-9963eb69883b",
+      "components": {
+        "75acd227-209f-4391-b104-c4f5a1dc0855": {
+          "id": "75acd227-209f-4391-b104-c4f5a1dc0855",
+          "name": "abrir-torcaza",
+          "parameters": {}
+        }
+      },
+      "ui": {
+        "type": "3d",
+        "width": 36,
+        "height": 36,
+        "background": "#00a142",
+        "borderRadius": 18,
+        "flexDirection": "row",
+        "backgroundOpacity": 1,
+        "padding": "10",
+        "gap": "6",
+        "alignItems": "center",
+        "justifyContent": "center"
+      },
+      "name": "boton-torcaza",
+      "order": 5.565975936319997
+    },
+    "4f54c73e-5de2-4ce4-adc6-821f36b6aa78": {
+      "id": "4f54c73e-5de2-4ce4-adc6-821f36b6aa78",
+      "position": [
+        -0.323,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "df5bf73a-52dd-432a-a7ab-faa674d087ab",
+      "components": {},
+      "name": "Icon (4)",
+      "ui": {
+        "width": 16,
+        "height": 16,
+        "image": {
+          "type": "url",
+          "url": "https://cdn-icons-png.flaticon.com/512/3342/3342176.png"
+        },
+        "backgroundOpacity": 1,
+        "backgroundSize": "contain"
+      },
+      "order": 0.03057176283191343
+    },
+    "5215b967-b03d-4f15-ad26-6fb75b4e3c4e": {
+      "id": "5215b967-b03d-4f15-ad26-6fb75b4e3c4e",
+      "position": [
+        -0.6923881612679317,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "cc7f80c7-fd52-44ba-bd0b-8b6c1699a278",
+      "components": {},
+      "ui": {
+        "type": "3d",
+        "width": 36,
+        "height": 36,
+        "background": "#00a142",
+        "borderRadius": 18,
+        "flexDirection": "row",
+        "backgroundOpacity": 1,
+        "padding": "10",
+        "gap": "6",
+        "alignItems": "center",
+        "justifyContent": "center"
+      },
+      "name": "galeria (1)",
+      "order": 9.401479421657934,
+      "disabled": true
+    },
+    "89ee2eea-d4d9-428b-9004-18be66820bf7": {
+      "id": "89ee2eea-d4d9-428b-9004-18be66820bf7",
+      "position": [
+        -0.323,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "5215b967-b03d-4f15-ad26-6fb75b4e3c4e",
+      "components": {},
+      "name": "Icon (5)",
+      "ui": {
+        "width": 16,
+        "height": 16,
+        "image": {
+          "type": "url",
+          "url": "https://cdn-icons-png.flaticon.com/512/3342/3342176.png"
+        },
+        "backgroundOpacity": 1,
+        "backgroundSize": "contain"
+      },
+      "order": 0.03057176283191343
+    },
+    "c6d8782b-751b-4f1f-a87d-e5cf10880740": {
+      "id": "c6d8782b-751b-4f1f-a87d-e5cf10880740",
+      "position": [
+        -0.6724760762139295,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "aeffb6d5-5e49-42ba-af64-c4a89d723242",
+      "components": {
+        "f7c4211d-010d-4665-9742-fb81223c21df": {
+          "id": "f7c4211d-010d-4665-9742-fb81223c21df",
+          "name": "abrir-loro",
+          "parameters": {}
+        }
+      },
+      "ui": {
+        "type": "3d",
+        "width": 36,
+        "height": 36,
+        "background": "#00a142",
+        "borderRadius": 18,
+        "flexDirection": "row",
+        "backgroundOpacity": 1,
+        "padding": "10",
+        "gap": "6",
+        "alignItems": "center",
+        "justifyContent": "center"
+      },
+      "name": "boton-loro",
+      "order": 14.99074698116555
+    },
+    "3b2b609f-5245-41ba-a233-60199e7b0c5c": {
+      "id": "3b2b609f-5245-41ba-a233-60199e7b0c5c",
+      "position": [
+        -0.323,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "c6d8782b-751b-4f1f-a87d-e5cf10880740",
+      "components": {},
+      "name": "Icon (6)",
+      "ui": {
+        "width": 16,
+        "height": 16,
+        "image": {
+          "type": "url",
+          "url": "https://cdn-icons-png.flaticon.com/512/3342/3342176.png"
+        },
+        "backgroundOpacity": 1,
+        "backgroundSize": "contain"
+      },
+      "order": 0.03057176283191343
     }
   },
   "spaces": {

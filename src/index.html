@@ -275,6 +275,106 @@
   }
 </script>
 
+<!-- VISTA DE LA GALERÍA DINÁMICA -->
+<div id="ui-galeria" class="interfaz-ui" style="display: none; z-index: 300; background: rgba(0,0,0,0.95); justify-content: center; align-items: center; flex-direction: column;">
+  
+<!-- Botón para cerrar la galería con el evento onclick añadido -->
+  <button id="btn-cerrar-galeria" onclick="cerrarGaleria()" style="position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.2); border: none; color: white; font-size: 24px; width: 40px; height: 40px; border-radius: 50%; cursor: pointer;">✕</button>
+  <img id="galeria-img-principal" src="" style="max-width: 90%; max-height: 60vh; border-radius: 12px; object-fit: contain; transition: opacity 0.3s ease;">
+
+  <!-- Contenedor vacío donde JavaScript pondrá las miniaturas -->
+  <div id="contenedor-miniaturas" style="position: absolute; bottom: 40px; width: 90%; display: flex; gap: 15px; overflow-x: auto; padding-bottom: 10px;">
+  </div>
+</div>
+
+<!-- SCRIPT DE LA GALERÍA -->
+<script>
+  // Base de datos de las galerías
+  // Reemplaza los nombres por tus imágenes reales subidas a assets
+  const datosGalerias = {
+    torcaza: [
+      "./assets/img-torcaza-1.jpg",
+      "./assets/img-torcaza-2.jpg",
+      "./assets/img-torcaza-3.jpg"
+    ],
+    colibri: [
+      "./assets/img-colibri-1.jpg",
+      "./assets/img-colibri-2.jpg"
+    ],
+    loro: [
+      "./assets/img-loro-1.jpg",
+      "./assets/img-loro-2.jpg"
+      //"./assets/img-loro-3.jpg"
+    ],
+    // Puedes agregar bichofue y pechirrojo aquí...
+  };
+
+  // Función global que el botón 3D llamará para armar la galería
+  window.abrirGaleriaAve = function(aveId) {
+    const fotos = datosGalerias[aveId];
+    if (!fotos || fotos.length === 0) return; // Si no hay fotos, no hace nada
+
+    const galeria = document.getElementById('ui-galeria');
+    const imgPrincipal = document.getElementById('galeria-img-principal');
+    const contenedorMiniaturas = document.getElementById('contenedor-miniaturas');
+
+    // 1. Ponemos la primera foto como principal
+    imgPrincipal.src = fotos[0];
+
+    // 2. Limpiamos miniaturas anteriores
+    contenedorMiniaturas.innerHTML = '';
+
+    // 3. Creamos las miniaturas dinámicamente
+    fotos.forEach((fotoSrc, index) => {
+      const img = document.createElement('img');
+      img.src = fotoSrc;
+      img.style.width = '80px';
+      img.style.height = '80px';
+      img.style.borderRadius = '8px';
+      img.style.objectFit = 'cover';
+      img.style.cursor = 'pointer';
+      // La primera miniatura arranca con borde blanco (seleccionada)
+      img.style.border = index === 0 ? '2px solid white' : '2px solid transparent';
+      
+      // Evento al tocar una miniatura
+      img.onclick = () => {
+        // Cambiar la imagen principal con efecto suave
+        imgPrincipal.style.opacity = 0;
+        setTimeout(() => {
+          imgPrincipal.src = fotoSrc;
+          imgPrincipal.style.opacity = 1;
+        }, 150);
+
+        // Actualizar los bordes de todas las miniaturas
+        Array.from(contenedorMiniaturas.children).forEach(child => {
+          child.style.border = '2px solid transparent';
+        });
+        img.style.border = '2px solid white';
+      };
+      
+      contenedorMiniaturas.appendChild(img);
+    });
+
+    // 4. Mostramos la galería con animación fluida
+    galeria.style.display = 'flex';
+    setTimeout(() => {
+      galeria.classList.add('visible');
+    }, 10);
+  };
+
+  // NUEVA FUNCIÓN: Cierra la galería suavemente
+  window.cerrarGaleria = function() {
+    const galeria = document.getElementById('ui-galeria');
+    if (galeria) {
+      galeria.classList.remove('visible'); // Inicia animación de desvanecimiento
+      setTimeout(() => {
+        galeria.style.display = 'none';    // Lo oculta del todo tras terminar
+      }, 400);
+    }
+  };
+</script>
+  
+
 </body>
 
 </html>
