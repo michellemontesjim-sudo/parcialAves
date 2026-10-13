@@ -2775,6 +2775,85 @@
         "backgroundSize": "contain"
       },
       "order": 0.03057176283191343
+    },
+    "e0c51276-cf2e-498d-963b-cd85cc68b32f": {
+      "id": "e0c51276-cf2e-498d-963b-cd85cc68b32f",
+      "position": [
+        -0.6974008366647206,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "1f867c5e-4336-4506-b3db-abd9596e8a3c",
+      "components": {
+        "792bd4db-be95-4bdb-9869-96c38213771c": {
+          "id": "792bd4db-be95-4bdb-9869-96c38213771c",
+          "name": "abrir-pechirrojo",
+          "parameters": {}
+        }
+      },
+      "ui": {
+        "type": "3d",
+        "width": 36,
+        "height": 36,
+        "background": "#00a142",
+        "borderRadius": 18,
+        "flexDirection": "row",
+        "backgroundOpacity": 1,
+        "padding": "10",
+        "gap": "6",
+        "alignItems": "center",
+        "justifyContent": "center"
+      },
+      "name": "boton-pechirrojo",
+      "order": 10.636722617617915
+    },
+    "7740179d-9b6c-4807-904e-47cdd3eec3f0": {
+      "id": "7740179d-9b6c-4807-904e-47cdd3eec3f0",
+      "position": [
+        -0.323,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "e0c51276-cf2e-498d-963b-cd85cc68b32f",
+      "components": {},
+      "name": "Icon (8)",
+      "ui": {
+        "width": 16,
+        "height": 16,
+        "image": {
+          "type": "url",
+          "url": "https://cdn-icons-png.flaticon.com/512/3342/3342176.png"
+        },
+        "backgroundOpacity": 1,
+        "backgroundSize": "contain"
+      },
+      "order": 0.03057176283191343
     }
   },
   "spaces": {
