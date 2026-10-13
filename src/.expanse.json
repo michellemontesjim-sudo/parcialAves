@@ -2560,7 +2560,13 @@
       "geometry": null,
       "material": null,
       "parentId": "cc7f80c7-fd52-44ba-bd0b-8b6c1699a278",
-      "components": {},
+      "components": {
+        "fdd07d70-f06f-42bf-ae56-9f5be62ac97f": {
+          "id": "fdd07d70-f06f-42bf-ae56-9f5be62ac97f",
+          "name": "abrir-colibri",
+          "parameters": {}
+        }
+      },
       "ui": {
         "type": "3d",
         "width": 36,
@@ -2574,9 +2580,8 @@
         "alignItems": "center",
         "justifyContent": "center"
       },
-      "name": "galeria (1)",
-      "order": 9.401479421657934,
-      "disabled": true
+      "name": "boton-colibri",
+      "order": 9.401479421657934
     },
     "89ee2eea-d4d9-428b-9004-18be66820bf7": {
       "id": "89ee2eea-d4d9-428b-9004-18be66820bf7",
@@ -2680,6 +2685,85 @@
       "parentId": "c6d8782b-751b-4f1f-a87d-e5cf10880740",
       "components": {},
       "name": "Icon (6)",
+      "ui": {
+        "width": 16,
+        "height": 16,
+        "image": {
+          "type": "url",
+          "url": "https://cdn-icons-png.flaticon.com/512/3342/3342176.png"
+        },
+        "backgroundOpacity": 1,
+        "backgroundSize": "contain"
+      },
+      "order": 0.03057176283191343
+    },
+    "e9f759b3-eec2-4ac4-9e45-757f5eb7321e": {
+      "id": "e9f759b3-eec2-4ac4-9e45-757f5eb7321e",
+      "position": [
+        -0.7034449624895451,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "c68dcc96-11dc-4924-b603-981dd90a9356",
+      "components": {
+        "9acc8b3e-9e92-4f6e-a585-564312f4d265": {
+          "id": "9acc8b3e-9e92-4f6e-a585-564312f4d265",
+          "name": "abrir-bichofue",
+          "parameters": {}
+        }
+      },
+      "ui": {
+        "type": "3d",
+        "width": 36,
+        "height": 36,
+        "background": "#00a142",
+        "borderRadius": 18,
+        "flexDirection": "row",
+        "backgroundOpacity": 1,
+        "padding": "10",
+        "gap": "6",
+        "alignItems": "center",
+        "justifyContent": "center"
+      },
+      "name": "boton-bichofue",
+      "order": 5.22214981277981
+    },
+    "c8d17c90-a3fe-40d5-a565-f6a60fb661f8": {
+      "id": "c8d17c90-a3fe-40d5-a565-f6a60fb661f8",
+      "position": [
+        -0.323,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "e9f759b3-eec2-4ac4-9e45-757f5eb7321e",
+      "components": {},
+      "name": "Icon (7)",
       "ui": {
         "width": 16,
         "height": 16,
