@@ -136,9 +136,9 @@
     📝 Hacer Trivia de Aves
   </button>
 
-  <button id="btn-sonido-html" style="position: absolute; bottom: 100px; left: 50%; transform: translateX(-50%); z-index: 100; background: #2196F3; color: white; border: none; padding: 15px 30px; border-radius: 30px; font-size: 1.1rem; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); pointer-events: auto; cursor: pointer; transition: background 0.3s;">
+  <!--<button id="btn-sonido-html" style="position: absolute; bottom: 100px; left: 50%; transform: translateX(-50%); z-index: 100; background: #2196F3; color: white; border: none; padding: 15px 30px; border-radius: 30px; font-size: 1.1rem; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); pointer-events: auto; cursor: pointer; transition: background 0.3s;">
     🔊 Escuchar Ave
-  </button>
+  </button>-->
 
   <!-- Tarjeta del Quiz -->
   <div id="ui-container">
@@ -157,8 +157,8 @@
     torcaza: {
       titulo: "Torcaza naguiblanca",
       cientifico: "Zenaida auriculata",
-      imagen: "assets/imgParaInterfaz/img-torcaza.jpg",   // Reemplaza con el nombre exacto de tu archivo de imagen
-      audio: "assets/cantoTorcaza.mp3", // Reemplaza con el nombre exacto de tu archivo MP3
+      imagen: "assets/imgParaInterfaz/img-torcaza.jpg",
+      audio: "assets/cantoTorcaza.mp3",
       desc: "Ave muy común en zonas urbanas y rurales, conocida por su canto suave y melancólico.",
       habitat: "Zonas urbanas",
       tamano: "24–26 cm",
@@ -168,7 +168,7 @@
       titulo: "Colibrí esmeralda",
       cientifico: "Trochilidae",
       imagen: "assets/imgParaInterfaz/img-colibri.jpg", 
-      audio: "audio-colibri.mp3",
+      audio: "assets/cantosAves/cantoColibri.mp3",
       desc: "Pequeño y brillante, su vuelo le permite mantenerse suspendido frente a las flores y volar hacia atrás.",
       habitat: "Bosques y jardines",
       tamano: "7–13 cm",
@@ -178,7 +178,7 @@
       titulo: "Loro cabeciamarilla",
       cientifico: "Psittacidae",
       imagen: "assets/imgParaInterfaz/img-loro.jpg",
-      audio: "audio-loro.mp3",
+      audio: "assets/cantosAves/cantoLoro.mp3",
       desc: "Ave muy colorida e inteligente, conocida por su capacidad de imitar sonidos y su pico curvo.",
       habitat: "Selvas y bosques",
       tamano: "30–40 cm",
@@ -188,7 +188,7 @@
       titulo: "Bichofué",
       cientifico: "Pitangus sulphuratus",
       imagen: "assets/imgParaInterfaz/img-bichofue.jpg",
-      audio: "audio-bichofue.mp3",
+      audio: "assets/cantosAves/cantoBichofue.mp3",
       desc: "Ave de pecho amarillo vibrante y antifaz negro, muy ruidosa. Su canto parece decir su propio nombre.",
       habitat: "Zonas abiertas",
       tamano: "21–26 cm",
@@ -198,7 +198,7 @@
       titulo: "Pechirrojo",
       cientifico: "Pyrocephalus rubinus",
       imagen: "assets/imgParaInterfaz/img-pechirrojo.jpg",
-      audio: "audio-pechirrojo.mp3",
+      audio: "assets/cantosAves/cantoPechirrojo.mp3",
       desc: "El macho destaca por su espectacular plumaje rojo intenso. Es un cazador muy ágil que atrapa insectos en pleno vuelo.",
       habitat: "Zonas abiertas",
       tamano: "13–15 cm",
@@ -286,6 +286,56 @@
   <div id="contenedor-miniaturas" style="position: absolute; bottom: 40px; width: 90%; display: flex; gap: 15px; overflow-x: auto; padding-bottom: 10px;">
   </div>
 </div>
+
+<!-- VISTA DEL MAPA DE GOOGLE -->
+<div id="ui-mapa" class="interfaz-ui" style="display: none; z-index: 300; background: rgba(0,0,0,0.95); justify-content: center; align-items: center; flex-direction: column; position: fixed; top: 0; left: 0; width: 100%; height: 100%;">
+  
+  <button id="btn-cerrar-mapa" onclick="cerrarMapa()" style="position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.2); border: none; color: white; font-size: 24px; width: 40px; height: 40px; border-radius: 50%; cursor: pointer;">✕</button>
+
+  <h3 style="color: white; margin-bottom: 15px; font-family: sans-serif;">Ubicación en el Campus</h3>
+  
+  <!-- El Iframe interactivo de Google Maps -->
+  <iframe id="iframe-google-maps" src="" width="90%" height="60%" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<script>
+  // Diccionario con los enlaces 'src' de Google Maps para cada ave
+  const enlacesMapas = {
+    torcaza: "https://www.google.com/maps/d/u/0/embed?mid=1W3T8GPyWko-f01D25sMzUunSblwgqfU&ehbc=2E312F", 
+    loro: "https://www.google.com/maps/d/u/0/embed?mid=1gv6X7Eupqk_BRavOhwRrS-1nUWycnXQ&ehbc=2E312F",
+    colibri: "https://www.google.com/maps/d/u/0/embed?mid=1pUWKshgJNs-i3Yi8VC75dCtEHFpdsZA&ehbc=2E312F",
+    bichofue: "https://www.google.com/maps/d/u/0/embed?mid=1dfp1-gvQSBatIhWMmK1SKYmviWDjxXw&ehbc=2E312F",
+    pechirrojo: "https://www.google.com/maps/d/u/0/embed?mid=1wqBTi4CDiZjmnVlWFGttH3VPEWuTD2M&ehbc=2E312F"
+  };
+
+  // Función global para abrir el mapa desde 8th Wall
+  window.abrirMapaUbicacion = function(aveId) {
+    const enlace = enlacesMapas[aveId];
+    if (!enlace) {
+      console.warn("No se encontró enlace de mapa para:", aveId);
+      return;
+    }
+
+    const modalMapa = document.getElementById('ui-mapa');
+    document.getElementById('iframe-google-maps').src = enlace;
+
+    modalMapa.style.display = 'flex';
+    setTimeout(() => {
+      modalMapa.classList.add('visible');
+    }, 10);
+  };
+
+  window.cerrarMapa = function() {
+    const modalMapa = document.getElementById('ui-mapa');
+    if (modalMapa) {
+      modalMapa.classList.remove('visible'); 
+      setTimeout(() => {
+        modalMapa.style.display = 'none';
+        document.getElementById('iframe-google-maps').src = ""; // Limpia el mapa al cerrar
+      }, 400); 
+    }
+  };
+</script>
 
 <!-- SCRIPT DE LA GALERÍA -->
 <script>

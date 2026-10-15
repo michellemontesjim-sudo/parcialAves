@@ -1,7 +1,7 @@
 {
   "type": "PLANAR",
   "properties": {
-    "top": 18,
+    "top": 260,
     "left": 0,
     "width": 500,
     "height": 667,
@@ -19,5 +19,5 @@
     "luminanceImage": "ave-bichofue_luminance.png"
   },
   "created": 1791236358735,
-  "updated": 1791241498213
+  "updated": 1792024811938
 }

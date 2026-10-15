@@ -1419,7 +1419,7 @@
       "audio": {
         "src": {
           "type": "asset",
-          "asset": "assets/cantoTorcaza.mp3"
+          "asset": "assets/cantosAves/cantoTorcaza.mp3"
         },
         "paused": true
       }
@@ -1427,7 +1427,7 @@
     "cc7f80c7-fd52-44ba-bd0b-8b6c1699a278": {
       "id": "cc7f80c7-fd52-44ba-bd0b-8b6c1699a278",
       "position": [
-        2.0313782697689424,
+        2.4499147670130954,
         0,
         0
       ],
@@ -1455,7 +1455,7 @@
     "aeffb6d5-5e49-42ba-af64-c4a89d723242": {
       "id": "aeffb6d5-5e49-42ba-af64-c4a89d723242",
       "position": [
-        3.9408181287682256,
+        4.76227553472081,
         0,
         0
       ],
@@ -1483,7 +1483,7 @@
     "c68dcc96-11dc-4924-b603-981dd90a9356": {
       "id": "c68dcc96-11dc-4924-b603-981dd90a9356",
       "position": [
-        5.640635839922881,
+        7.054039285341575,
         0,
         0
       ],
@@ -1511,8 +1511,8 @@
     "1f867c5e-4336-4506-b3db-abd9596e8a3c": {
       "id": "1f867c5e-4336-4506-b3db-abd9596e8a3c",
       "position": [
-        7.3632360305607945,
-        0,
+        9.45270731221493,
+        -0.04047805238554747,
         0
       ],
       "rotation": [
@@ -1535,82 +1535,6 @@
         "name": "ave-pechirrojo"
       },
       "order": 8.159776557676405
-    },
-    "c0e7ce83-b1f0-4ed8-8d30-d955e951b2d1": {
-      "id": "c0e7ce83-b1f0-4ed8-8d30-d955e951b2d1",
-      "position": [
-        -0.4675823832781904,
-        0,
-        0.18328157925557964
-      ],
-      "rotation": [
-        0,
-        0,
-        0,
-        1
-      ],
-      "scale": [
-        0.3065996328965788,
-        0.30659963289657877,
-        0.3065996328965788
-      ],
-      "geometry": null,
-      "material": null,
-      "parentId": "570ff713-1f33-4838-99ad-9963eb69883b",
-      "components": {},
-      "ui": {
-        "type": "3d",
-        "width": 41,
-        "height": 36,
-        "background": "#039900",
-        "borderRadius": 18,
-        "flexDirection": "row",
-        "backgroundOpacity": 1,
-        "padding": "10",
-        "gap": "6",
-        "alignItems": "center",
-        "justifyContent": "center",
-        "ignoreRaycast": false,
-        "stackingOrder": 10
-      },
-      "name": "quizTorcaza",
-      "order": 1.5489239655374871,
-      "disabled": true
-    },
-    "c8274e6d-eae3-4046-90f0-224f23cdbb86": {
-      "id": "c8274e6d-eae3-4046-90f0-224f23cdbb86",
-      "position": [
-        -0.323,
-        0,
-        0
-      ],
-      "rotation": [
-        0,
-        0,
-        0,
-        1
-      ],
-      "scale": [
-        1,
-        1,
-        1
-      ],
-      "geometry": null,
-      "material": null,
-      "parentId": "c0e7ce83-b1f0-4ed8-8d30-d955e951b2d1",
-      "components": {},
-      "name": "Icon",
-      "ui": {
-        "width": 16,
-        "height": 16,
-        "image": {
-          "type": "url",
-          "url": "https://cdn-icons-png.flaticon.com/512/5694/5694744.png"
-        },
-        "backgroundOpacity": 1,
-        "backgroundSize": "contain"
-      },
-      "order": 0.47368053844834607
     },
     "c688d857-76c5-4496-bfb4-a7a559da0595": {
       "id": "c688d857-76c5-4496-bfb4-a7a559da0595",
@@ -1730,20 +1654,20 @@
     "61ceb400-ed2f-430b-8f9b-6823b51d7b61": {
       "id": "61ceb400-ed2f-430b-8f9b-6823b51d7b61",
       "position": [
-        0.19798984334691117,
-        0.5275543612767494,
-        0.2826820487935964
+        0.19798984334691028,
+        0.474916126567553,
+        0.28268204879359526
       ],
       "rotation": [
         0,
-        0.9968277200961131,
+        0.955848201457096,
         0,
-        -0.07958954986670817
+        -0.2938608782591428
       ],
       "scale": [
-        0.10578819521580456,
+        0.10578819521580453,
         0.10578819521580457,
-        0.10578819521580456
+        0.10578819521580453
       ],
       "geometry": null,
       "material": null,
@@ -1950,7 +1874,7 @@
       "id": "d152c790-89f8-4e29-b8a8-4ef23ade25cf",
       "position": [
         -0.022276216933921233,
-        -0.49286610649898693,
+        -0.42262563758303545,
         0.1020903404638655
       ],
       "rotation": [
@@ -2217,8 +2141,8 @@
     "bc611b57-2c5a-4deb-ac17-d0ccfd069df6": {
       "id": "bc611b57-2c5a-4deb-ac17-d0ccfd069df6",
       "position": [
-        -0.4648286517771698,
-        -0.36781271855012376,
+        -0.436315415859446,
+        -0.2771688962952983,
         0.008864437198575074
       ],
       "rotation": [
@@ -2250,8 +2174,8 @@
     "bd9e24c1-16b7-4642-92e2-1560359453dd": {
       "id": "bd9e24c1-16b7-4642-92e2-1560359453dd",
       "position": [
-        -0.3934251820872787,
-        0.2527806499646574,
+        -0.3934251820872783,
+        0.31941823867686053,
         -0.38566090837154354
       ],
       "rotation": [
@@ -2283,7 +2207,7 @@
     "63348a01-6f3d-4fe6-b539-1751abc36276": {
       "id": "63348a01-6f3d-4fe6-b539-1751abc36276",
       "position": [
-        -1.7808828462958042,
+        -2.144351716797667,
         0,
         0
       ],
@@ -2311,7 +2235,7 @@
     "bd1c49e0-1b64-4277-ab34-e184db5db347": {
       "id": "bd1c49e0-1b64-4277-ab34-e184db5db347",
       "position": [
-        -0.025934473760258925,
+        0.02513767651533394,
         0.721975264025831,
         0
       ],
@@ -2427,19 +2351,19 @@
       "id": "ec1db0cc-292d-4cb5-a558-ee401785c7ae",
       "position": [
         -3.552713678800501e-15,
-        -0.4401893553706956,
+        -0.44045869019268785,
         0.3659323056686332
       ],
       "rotation": [
         0,
         0,
         0,
-        0.9999999999999998
+        1
       ],
       "scale": [
-        0.17347187547820261,
-        0.17347187547820261,
-        0.17347187547820261
+        0.08927837699544723,
+        0.09140319787958946,
+        0.09140319787958946
       ],
       "geometry": null,
       "material": {
@@ -2455,7 +2379,7 @@
           "asset": "assets/modelos/nido.glb"
         },
         "animationClip": "NIDO_BICHOFUE_CTRL_acción",
-        "loop": false
+        "loop": true
       },
       "name": "nido.glb",
       "order": 8.8031459911461
@@ -2854,6 +2778,692 @@
         "backgroundSize": "contain"
       },
       "order": 0.03057176283191343
+    },
+    "6be46389-ae91-4d1a-87ae-173ee0344d1b": {
+      "id": "6be46389-ae91-4d1a-87ae-173ee0344d1b",
+      "position": [
+        0.636942494093636,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "570ff713-1f33-4838-99ad-9963eb69883b",
+      "components": {
+        "fd5e314b-087a-4653-a681-9d1f47e29816": {
+          "id": "fd5e314b-087a-4653-a681-9d1f47e29816",
+          "name": "mapa-torcaza",
+          "parameters": {}
+        }
+      },
+      "ui": {
+        "type": "3d",
+        "width": 36,
+        "height": 36,
+        "background": "#00a142",
+        "borderRadius": 18,
+        "flexDirection": "row",
+        "backgroundOpacity": 1,
+        "padding": "10",
+        "gap": "6",
+        "alignItems": "center",
+        "justifyContent": "center"
+      },
+      "name": "boton-torcaza-mapa",
+      "order": 7.417635398506085
+    },
+    "bbbf3765-cee5-4411-8cb2-45b828f35ea5": {
+      "id": "bbbf3765-cee5-4411-8cb2-45b828f35ea5",
+      "position": [
+        -0.323,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "6be46389-ae91-4d1a-87ae-173ee0344d1b",
+      "components": {},
+      "name": "Icon (9)",
+      "ui": {
+        "width": 28,
+        "height": 20,
+        "image": {
+          "type": "url",
+          "url": "https://cdn-icons-png.flaticon.com/512/1198/1198515.png"
+        },
+        "backgroundOpacity": 1,
+        "backgroundSize": "contain"
+      },
+      "order": 0.03057176283191343
+    },
+    "d49f4b4e-b6ea-49dc-b4bb-f21f252d5291": {
+      "id": "d49f4b4e-b6ea-49dc-b4bb-f21f252d5291",
+      "position": [
+        0.6965188206145823,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "cc7f80c7-fd52-44ba-bd0b-8b6c1699a278",
+      "components": {
+        "b34ffcb0-91af-4414-90b7-dde705910c2d": {
+          "id": "b34ffcb0-91af-4414-90b7-dde705910c2d",
+          "name": "mapa-colibri",
+          "parameters": {}
+        }
+      },
+      "ui": {
+        "type": "3d",
+        "width": 36,
+        "height": 36,
+        "background": "#00a142",
+        "borderRadius": 18,
+        "flexDirection": "row",
+        "backgroundOpacity": 1,
+        "padding": "10",
+        "gap": "6",
+        "alignItems": "center",
+        "justifyContent": "center"
+      },
+      "name": "boton-colibri-mapa",
+      "order": 11.395444729106094
+    },
+    "95af2c4b-9ade-45cd-8607-fa2d0fbff178": {
+      "id": "95af2c4b-9ade-45cd-8607-fa2d0fbff178",
+      "position": [
+        -0.323,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "d49f4b4e-b6ea-49dc-b4bb-f21f252d5291",
+      "components": {},
+      "name": "Icon (10)",
+      "ui": {
+        "width": 28,
+        "height": 20,
+        "image": {
+          "type": "url",
+          "url": "https://cdn-icons-png.flaticon.com/512/1198/1198515.png"
+        },
+        "backgroundOpacity": 1,
+        "backgroundSize": "contain"
+      },
+      "order": 0.03057176283191343
+    },
+    "522caa4e-cae9-498b-923f-64eb08ca0523": {
+      "id": "522caa4e-cae9-498b-923f-64eb08ca0523",
+      "position": [
+        0.655161096018837,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "aeffb6d5-5e49-42ba-af64-c4a89d723242",
+      "components": {
+        "fd27d41d-f4d4-4f23-827c-9dd1c7b39b58": {
+          "id": "fd27d41d-f4d4-4f23-827c-9dd1c7b39b58",
+          "name": "mapa-loro",
+          "parameters": {}
+        }
+      },
+      "ui": {
+        "type": "3d",
+        "width": 36,
+        "height": 36,
+        "background": "#00a142",
+        "borderRadius": 18,
+        "flexDirection": "row",
+        "backgroundOpacity": 1,
+        "padding": "10",
+        "gap": "6",
+        "alignItems": "center",
+        "justifyContent": "center"
+      },
+      "name": "boton-loro-mapa",
+      "order": 16.275959830824167
+    },
+    "3f7952c2-60cc-4998-b4c6-e06fc2b76459": {
+      "id": "3f7952c2-60cc-4998-b4c6-e06fc2b76459",
+      "position": [
+        -0.323,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "522caa4e-cae9-498b-923f-64eb08ca0523",
+      "components": {},
+      "name": "Icon (11)",
+      "ui": {
+        "width": 28,
+        "height": 20,
+        "image": {
+          "type": "url",
+          "url": "https://cdn-icons-png.flaticon.com/512/1198/1198515.png"
+        },
+        "backgroundOpacity": 1,
+        "backgroundSize": "contain"
+      },
+      "order": 0.03057176283191343
+    },
+    "1c07b519-617c-4d6d-8a35-0c1ad07cb616": {
+      "id": "1c07b519-617c-4d6d-8a35-0c1ad07cb616",
+      "position": [
+        0.6383572336621066,
+        0,
+        0.03395299269143903
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "c68dcc96-11dc-4924-b603-981dd90a9356",
+      "components": {
+        "5646615d-7c9e-4a87-948d-c488777b7255": {
+          "id": "5646615d-7c9e-4a87-948d-c488777b7255",
+          "name": "mapa-bichofue",
+          "parameters": {}
+        }
+      },
+      "ui": {
+        "type": "3d",
+        "width": 36,
+        "height": 36,
+        "background": "#00a142",
+        "borderRadius": 18,
+        "flexDirection": "row",
+        "backgroundOpacity": 1,
+        "padding": "10",
+        "gap": "6",
+        "alignItems": "center",
+        "justifyContent": "center"
+      },
+      "name": "boton-bichofue-mapa",
+      "order": 7.073678258976635
+    },
+    "e32fd3db-ddc6-4161-8671-3635cadb3f29": {
+      "id": "e32fd3db-ddc6-4161-8671-3635cadb3f29",
+      "position": [
+        -0.323,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "1c07b519-617c-4d6d-8a35-0c1ad07cb616",
+      "components": {},
+      "name": "Icon (12)",
+      "ui": {
+        "width": 28,
+        "height": 20,
+        "image": {
+          "type": "url",
+          "url": "https://cdn-icons-png.flaticon.com/512/1198/1198515.png"
+        },
+        "backgroundOpacity": 1,
+        "backgroundSize": "contain"
+      },
+      "order": 0.03057176283191343
+    },
+    "dece5d15-1c6e-4829-a4e1-31f9ddd8359a": {
+      "id": "dece5d15-1c6e-4829-a4e1-31f9ddd8359a",
+      "position": [
+        0.6277837815125622,
+        0,
+        0.03395299269143903
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "1f867c5e-4336-4506-b3db-abd9596e8a3c",
+      "components": {
+        "a4b16ca8-215c-4081-92da-d866861f87e2": {
+          "id": "a4b16ca8-215c-4081-92da-d866861f87e2",
+          "name": "mapa-pechirrojo",
+          "parameters": {}
+        }
+      },
+      "ui": {
+        "type": "3d",
+        "width": 36,
+        "height": 36,
+        "background": "#00a142",
+        "borderRadius": 18,
+        "flexDirection": "row",
+        "backgroundOpacity": 1,
+        "padding": "10",
+        "gap": "6",
+        "alignItems": "center",
+        "justifyContent": "center"
+      },
+      "name": "boton-pechirrojo-mapa",
+      "order": 11.83888190645858
+    },
+    "e487eacd-deb7-4d2a-9d97-408318dfdc6e": {
+      "id": "e487eacd-deb7-4d2a-9d97-408318dfdc6e",
+      "position": [
+        -0.323,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "dece5d15-1c6e-4829-a4e1-31f9ddd8359a",
+      "components": {},
+      "name": "Icon (13)",
+      "ui": {
+        "width": 28,
+        "height": 20,
+        "image": {
+          "type": "url",
+          "url": "https://cdn-icons-png.flaticon.com/512/1198/1198515.png"
+        },
+        "backgroundOpacity": 1,
+        "backgroundSize": "contain"
+      },
+      "order": 0.03057176283191343
+    },
+    "517b1907-5810-46be-8b1f-9e50b1551e08": {
+      "id": "517b1907-5810-46be-8b1f-9e50b1551e08",
+      "position": [
+        -0.7395810198579862,
+        -0.04063376408181894,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1.0282777641493515,
+        1.0282777641493515,
+        1.0282777641493515
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "63348a01-6f3d-4fe6-b539-1751abc36276",
+      "components": {
+        "8fcd5be2-7097-4fa8-9758-a3da19a5c9a9": {
+          "id": "8fcd5be2-7097-4fa8-9758-a3da19a5c9a9",
+          "name": "abrir-enlace",
+          "parameters": {
+            "url": "https://www.uao.edu.co/boletin-soy-uao/las-aves-de-la-uao-un-proyecto-liderado-por-un-egresado-autonomo/"
+          }
+        }
+      },
+      "ui": {
+        "type": "3d",
+        "width": 39,
+        "height": 35,
+        "background": "#096d9f",
+        "borderRadius": 18,
+        "flexDirection": "row",
+        "backgroundOpacity": 1,
+        "padding": "10",
+        "gap": "6",
+        "alignItems": "center",
+        "justifyContent": "center"
+      },
+      "name": "Button (2)",
+      "order": 2.1939544601689276
+    },
+    "93335bff-51d1-4931-838f-43fafe168149": {
+      "id": "93335bff-51d1-4931-838f-43fafe168149",
+      "position": [
+        -0.323,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "geometry": null,
+      "material": null,
+      "parentId": "517b1907-5810-46be-8b1f-9e50b1551e08",
+      "components": {},
+      "name": "Icon (14)",
+      "ui": {
+        "width": 44,
+        "height": 17,
+        "image": {
+          "type": "url",
+          "url": "https://cdn-icons-png.flaticon.com/512/8522/8522275.png"
+        },
+        "backgroundOpacity": 1,
+        "backgroundSize": "contain"
+      },
+      "order": 0.03358515849761545
+    },
+    "a47ab829-8075-406c-bf93-124bfe4e2fbc": {
+      "id": "a47ab829-8075-406c-bf93-124bfe4e2fbc",
+      "position": [
+        0,
+        1.1506611326471918,
+        -0.22351117810624394
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        0.9431403998829191,
+        0.5971339521222163,
+        0.5971339521222163
+      ],
+      "geometry": {
+        "type": "plane",
+        "width": 1,
+        "height": 1
+      },
+      "material": {
+        "type": "unlit",
+        "color": "#FFFFFF",
+        "depthWrite": false,
+        "depthTest": false,
+        "textureSrc": {
+          "type": "asset",
+          "asset": "assets/videosAves/torcaza.mp4"
+        }
+      },
+      "parentId": "570ff713-1f33-4838-99ad-9963eb69883b",
+      "components": {},
+      "name": "Plane",
+      "order": 8.602758774035395,
+      "videoControls": {
+        "loop": true,
+        "volume": 0
+      }
+    },
+    "0cfda565-0ab5-4cf5-b552-7df3928ef123": {
+      "id": "0cfda565-0ab5-4cf5-b552-7df3928ef123",
+      "position": [
+        0.006819482766673879,
+        1.1159687217935752,
+        -0.22351117810624394
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        0.9431403998829191,
+        0.5971339521222163,
+        0.5971339521222163
+      ],
+      "geometry": {
+        "type": "plane",
+        "width": 1,
+        "height": 1
+      },
+      "material": {
+        "type": "unlit",
+        "color": "#FFFFFF",
+        "depthWrite": false,
+        "depthTest": false,
+        "textureSrc": {
+          "type": "asset",
+          "asset": "assets/videosAves/Colibr_esmeralda_hondurea.mp4"
+        }
+      },
+      "parentId": "cc7f80c7-fd52-44ba-bd0b-8b6c1699a278",
+      "components": {},
+      "name": "Plane (1)",
+      "order": 12.829928004291329,
+      "videoControls": {
+        "loop": true,
+        "volume": 0
+      }
+    },
+    "97a34670-5935-4bc8-985f-cdfeea6c7950": {
+      "id": "97a34670-5935-4bc8-985f-cdfeea6c7950",
+      "position": [
+        -0.00640910105230752,
+        1.0512225568098859,
+        -0.22351117810624394
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        0.9431403998829191,
+        0.5971339521222163,
+        0.5971339521222163
+      ],
+      "geometry": {
+        "type": "plane",
+        "width": 1,
+        "height": 1
+      },
+      "material": {
+        "type": "unlit",
+        "color": "#FFFFFF",
+        "depthWrite": false,
+        "depthTest": false,
+        "textureSrc": {
+          "type": "asset",
+          "asset": "assets/videosAves/PorUnCieloDeAves__Amazona_ochrocephala_Loro_cabeciamarilla.mp4"
+        }
+      },
+      "parentId": "aeffb6d5-5e49-42ba-af64-c4a89d723242",
+      "components": {},
+      "name": "Plane (2)",
+      "order": 18.05517553966629,
+      "videoControls": {
+        "loop": true,
+        "volume": 0
+      }
+    },
+    "abf88b88-f86c-46ae-8f9f-0fd9b5428cd0": {
+      "id": "abf88b88-f86c-46ae-8f9f-0fd9b5428cd0",
+      "position": [
+        0.029122287268462443,
+        0.9534308666745597,
+        -0.22351117810624394
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        0.9431403998829191,
+        0.5971339521222163,
+        0.5971339521222163
+      ],
+      "geometry": {
+        "type": "plane",
+        "width": 1,
+        "height": 1
+      },
+      "material": {
+        "type": "unlit",
+        "color": "#FFFFFF",
+        "depthWrite": false,
+        "depthTest": false,
+        "textureSrc": {
+          "type": "asset",
+          "asset": "assets/videosAves/vidssavecom_Bichofue_Pitangus_sulphuratus_-_Birdwatching_Colombia_480P.mp4"
+        }
+      },
+      "parentId": "c68dcc96-11dc-4924-b603-981dd90a9356",
+      "components": {},
+      "name": "Plane (3)",
+      "order": 8.134493247931513,
+      "videoControls": {
+        "loop": true,
+        "volume": 0
+      }
+    },
+    "0fa4b020-004e-4549-adcd-2ce559d00b47": {
+      "id": "0fa4b020-004e-4549-adcd-2ce559d00b47",
+      "position": [
+        -0.027218291172532716,
+        0.9534308666745597,
+        -0.22351117810624394
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        0.9431403998829191,
+        0.5971339521222163,
+        0.5971339521222163
+      ],
+      "geometry": {
+        "type": "plane",
+        "width": 1,
+        "height": 1
+      },
+      "material": {
+        "type": "unlit",
+        "color": "#FFFFFF",
+        "depthWrite": false,
+        "depthTest": false,
+        "textureSrc": {
+          "type": "asset",
+          "asset": "assets/videosAves/vidssavecom_Atrapamoscas_pechirrojo_-_Pyrocephalus_rubinus_-_Bird_Valley_Foundation_720P.mp4"
+        }
+      },
+      "parentId": "1f867c5e-4336-4506-b3db-abd9596e8a3c",
+      "components": {},
+      "name": "Plane (4)",
+      "order": 13.337851733822037,
+      "videoControls": {
+        "loop": true,
+        "volume": 0
+      }
     }
   },
   "spaces": {
