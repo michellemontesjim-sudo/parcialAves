@@ -1,11 +1,17 @@
 import * as ecs from '@8thwall/ecs'
 
 const preguntas = [
-  { ave: 'Torcaza', pregunta: '¿Cuál es el hábitat principal de la torcaza?', opciones: ['Zonas urbanas y rurales', 'Selva profunda'], correcta: 0 },
-  { ave: 'Colibrí', pregunta: '¿Cuántas veces por segundo bate sus alas el colibrí?', opciones: ['Hasta 80 veces', 'Solo 10 veces'], correcta: 0 },
-  { ave: 'Loro', pregunta: '¿Qué característica hace únicos a los loros?', opciones: ['Vuelan hacia atrás', 'Pueden imitar sonidos'], correcta: 1 },
+  { ave: 'Torcaza', pregunta: '¿Cuál es el hábitat principal de la torcaza?', opciones: ['Zonas abiertas urbanas y rurales', 'Zonas de alta montaña'], correcta: 0 },
+  { ave: 'Colibrí', pregunta: '¿De qué color es el colibrí esmeralada macho?', opciones: ['Completamente verde esmeralda y cola azul', 'Verdes y gris pálido'], correcta: 0 },
+  { ave: 'Loro', pregunta: '¿Los loros cabeciamarilla van en parvadas o en solitario?', opciones: ['Van en solitario', 'En parejas o parvadas pequeñas'], correcta: 1 },
   { ave: 'Bichofué', pregunta: '¿De dónde proviene el nombre "bichofué"?', opciones: ['Su canto', 'Su plumaje'], correcta: 0 },
-  { ave: 'Pechirrojo', pregunta: '¿Qué color predomina en el pecho de los machos?', opciones: ['Amarillo pálido', 'Rojo intenso'], correcta: 1 }
+  { ave: 'Pechirrojo', pregunta: '¿Qué color predomina en la corona de los pechirrojos machos adultos?', opciones: ['Grisáceo opaco', 'Rojo brillante'], correcta: 1 },
+  { ave: 'Torcaza', pregunta: '¿En qué continente se encuentra ampliamente distribuida la torcaza?', opciones: ['Europa y Asia', 'Suramérica'], correcta: 1 },
+  { ave: 'Colibrí', pregunta: '¿Dónde se encuentra usualmente el colibrí esmeralda?', opciones: ['Hábitats bastante secos y abiertos', 'Bosques frondosos'], correcta: 0 },
+  { ave: 'Loro', pregunta: 'A diferencia de otros pericos ¿cómo vuela el loro cabeciamarilla?', opciones: ['Con pequeños rebotes distintivos', 'Ondulante en forma de zig-zag'], correcta: 0 },
+  { ave: 'Bichofué', pregunta: '¿En qué áreas suele encontrarse el bichofué?', opciones: ['Bosques cerrados o densos', 'Áreas con arbustos o cuerpos de agua'], correcta: 1 },
+  { ave: 'Pechirrojo', pregunta: '¿De qué se alimenta principalmente el pechirrojo?', opciones: ['Insectos', 'Granos de tamaño grande'], correcta: 0 }
+
 ]
 
 ecs.registerComponent({
